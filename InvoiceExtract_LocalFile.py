@@ -10,13 +10,10 @@ def load_json_schema(schema_file: str) -> dict:
     with open(schema_file, 'r') as file:
         return json.load(file)
 
-# Use the local file 'handwrittensample.png'
 image_path = 'handwrittensample.png'
 
-# Load the JSON schema
 invoice_schema = load_json_schema('invoice_schema.json')
 
-# Open the local image file in binary mode
 with open(image_path, 'rb') as image_file:
     image_base64 = base64.b64encode(image_file.read()).decode('utf-8')
 
